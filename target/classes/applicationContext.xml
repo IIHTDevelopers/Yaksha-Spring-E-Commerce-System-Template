@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Defining a Product bean with prototype scope -->
+	<bean id="product1" class="com.yaksha.assignment.Product" scope="prototype">
+		<property name="name" value="Laptop" />
+		<property name="price" value="1000.0" />
+	</bean>
+
+	<bean id="product2" class="com.yaksha.assignment.Product" scope="prototype">
+		<property name="name" value="Smartphone" />
+		<property name="price" value="500.0" />
+	</bean>
+
+	<!-- Defining an Order bean with singleton scope -->
+	<bean id="order1" class="com.yaksha.assignment.Order" scope="singleton">
+		<property name="orderId" value="ORD12345" />
+		<property name="totalAmount" value="0.0" />
+	</bean>
+
+</beans>
